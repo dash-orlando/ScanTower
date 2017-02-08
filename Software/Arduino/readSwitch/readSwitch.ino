@@ -5,25 +5,22 @@
  * 02/07/2017
  */
 
-#define dPin1  8
-#define dPin2  9
-
-void setup() {
-  Serial.begin(9600);
-  pinMode(dPin1, INPUT);
-  pinMode(dPin2, INPUT);
+void setup()
+{
+  Serial.begin( 115200 );
+  Serial1.begin( 115200 );
+  
 }
 
-void loop() {
+void loop()
+{
 
-  boolean status_dPin1 = digitalRead(dPin1);
-  boolean status_dPin2 = digitalRead(dPin2);
+  Serial.println("G0 X100");
+  Serial1.println("G0 X100");  
+  delay(500);
 
-  Serial.print( "Status of dPin1 = " );
-  Serial.println(status_dPin1);
-  Serial.print( "Status of dPin2 = " );
-  Serial.println(status_dPin2);
-
+  Serial.println("G0 X-100");
+  Serial1.println("G0 X-100");  
   delay(500);
 
 }
