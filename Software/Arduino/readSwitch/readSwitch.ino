@@ -23,14 +23,14 @@ void loop()
 
   if ( digitalRead(dPin1) == 1 )
   {
-    Serial.println("G0 X100 Y-100 Z100");
-    Serial1.println("G0 X100 Y-100 Z100");
+    Serial.println("G91 G0 X50 Y-50 Z50");
+    Serial1.println("G91 G0 X50 Y-50 Z50");
   }
 
   if ( digitalRead(dPin2) == 1 )
   {
-    Serial.println("G0 X-100 Y100 Z-100");
-    Serial1.println("G0 X-100 Y100 Z-100");
+    Serial.println("G91 G0 X-50 Y50 Z-50");
+    Serial1.println("G91 G0 X-50 Y50 Z-50");
   }
     
   delay(500);
