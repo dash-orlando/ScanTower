@@ -15,12 +15,12 @@ void setup()
 void loop()
 {
 
-  Serial.println("G0 X100");
-  Serial1.println("G0 X100");  
+  Serial.println("G0 X100 Y100");
+  Serial1.println("G0 X100 Y100");  
   delay(500);
 
-  Serial.println("G0 X-100");
-  Serial1.println("G0 X-100");  
+  Serial.println("G0 X-100 Y-100");
+  Serial1.println("G0 X-100 Y-100");  
   delay(500);
 
 }
