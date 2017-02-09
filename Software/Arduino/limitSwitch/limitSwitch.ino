@@ -31,37 +31,37 @@ void loop()
   // Down
   if ( digitalRead(dPin1) == 1 && digitalRead(limitPinBOTTOM) == 0 )
   {
-    Serial.println("G91 G0 X15 Y-15 Z15");
-    Serial1.println("G91 G0 X15 Y-15 Z15");
+    Serial.println("G91 G20 X0.25 Y-0.25 Z0.25");
+    Serial1.println("G91 G20 X0.25 Y-0.25 Z0.25");
+    delay(5);
   }
 
   // Up
   else if ( digitalRead(dPin2) == 1 && digitalRead(limitPinTOP) == 0 )
   {
-    Serial.println("G91 G0 X-15 Y15 Z-15");
-    Serial1.println("G91 G0 X-15 Y15 Z-15");
+    Serial.println("G91 G20 X-0.25 Y0.25 Z-0.25");
+    Serial1.println("G91 G20 X-0.25 Y0.25 Z-0.25");
+    delay(5);
   }
 
   // Down Limit
   if ( digitalRead(limitPinBOTTOM) == 1 )
   {
     digitalWrite(estopPin, HIGH);
-    //delay(50);
     digitalWrite(estopPin, LOW);
-    Serial.println("G91 G0 X-25 Y25 Z-25");
-    Serial1.println("G91 G0 X-25 Y25 Z-25");
+    Serial.println("G91 G20 X-0.5 Y0.5 Z-0.5");
+    Serial1.println("G91 G20 X-0.5 Y0.5 Z-0.5");
   }
 
   // Up Limit
   else if ( digitalRead(limitPinTOP) == 1 )
   {
     digitalWrite(estopPin, HIGH);
-    //delay(50);
     digitalWrite(estopPin, LOW);
-    Serial.println("G91 G0 X25 Y-25 Z25");
-    Serial1.println("G91 G0 X25 Y-25 Z25");
+    Serial.println("G91 G20 X0.5 Y-0.5 Z0.5");
+    Serial1.println("G91 G20 X0.5 Y-0.5 Z0.5");
   }
     
-  delay(150);
+  delay(60);
 
 }
